@@ -214,14 +214,28 @@ function checks(player){
         player = player
         winner(player)
     }
+
+    else if(count == 8){
+        console.log("we have a draw")
+        player = player
+        winner("Draw")    
+    }
+    
 }
 
 
 function winner(player){
     //document.getElementById("game-container").innerHTML = null
-    console.log("winner", player)
-    document.getElementById("winner").innerText = `Winner is ${player}`
-    window.setTimeout(restart, 5000)
+    if (player == "Draw"){
+        document.getElementById("winner").innerText = `Draw`
+        window.setTimeout(restart, 5000) 
+    }
+    else {
+        console.log("winner", player)
+        document.getElementById("winner").innerText = `Winner is ${player}`
+        window.setTimeout(restart, 5000)
+    }
+    
 }
 
 function restart() {

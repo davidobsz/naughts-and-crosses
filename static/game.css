@@ -8,15 +8,30 @@ body {
     text-align: center;
 }
 
+#game-container-ul-one{
+    margin:-15px 0;
+    line-height:0px
+    
+}
+
 #game-container-ul-one li{
     list-style: none;
     display: inline-block;
     background-color:white;
     opacity: 0.4;
+
     
-    padding: 5%;
+    padding: 0%;
+    padding-left: 2%;
+    padding-right: 2%;
     
-    font-size:250%
+    font-size:200%
+}
+
+#game-container-ul-two{
+    margin:-15px 0;
+    line-height:-0px
+   
 }
 
 #game-container-ul-two li{
@@ -24,9 +39,15 @@ body {
     display: inline-block;
     opacity: 0.3;
     
-    padding: 5%;
+    padding: 0%;
+    padding-left: 2%;
+    padding-right: 2%;
     
-    font-size:250%
+    font-size:200%
+}
+#game-container-ul-three{
+    margin:-15px 0;
+    line-height:0px
 }
 
 #game-container-ul-three li{
@@ -34,14 +55,16 @@ body {
     display: inline-block;
     opacity: 0.3;
     
-    padding: 5%;
+    padding: 0%;
+    padding-left: 2%;
+    padding-right: 2%;
     
-    font-size:250%
+    font-size:200%
     
 }
 
 #pick-symbol{
-    text-align: center
+    text-align: center  
 }
 
 
@@ -49,6 +72,7 @@ body {
     display: inline-block;
     padding: 5%;
     text-align: center
+    
 }
 
 
