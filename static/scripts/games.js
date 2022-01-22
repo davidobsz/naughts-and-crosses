@@ -48,10 +48,12 @@ function clear() {
     document.getElementById("pick-symbol").innerHTML = null
     document.getElementById("p1-symbol").innerHTML = null
     if (sum % 2 == 0) {
-        playerTurn = document.getElementById("player-turn").innerHTML = player1 
+        playerTurn = document.getElementById("player-turn").innerHTML = player1
+        document.getElementById("player-turn").innerHTML = `Player Turn: ${player1}`
         sum++
     } else if (sum % 2 == 1) {
         playerTurn = document.getElementById("player-turn").innerHTML = player2
+        document.getElementById("player-turn").innerHTML = `Player Turn: ${player2}`
         sum++
     }
     
@@ -72,6 +74,7 @@ function removes(vals){
     if ((playerTurn == player1) && (count % 2 == 0)) {
         console.log("player1 turn")
         document.getElementById(`${vals}`).innerText = playerTurn
+        document.getElementById("player-turn").innerText = `Player Turn: ${player2}`
         count++;
         playerTurn = player2
         checksBefore()
@@ -80,6 +83,7 @@ function removes(vals){
     else if ((playerTurn == player2) && (count % 2 == 1)){
         console.log("player 2 turn")
         document.getElementById(`${vals}`).innerText = playerTurn
+        document.getElementById("player-turn").innerText = `Player Turn: ${player1}`
         count++;
         playerTurn = player1
         checksBefore()
@@ -217,4 +221,9 @@ function winner(player){
     //document.getElementById("game-container").innerHTML = null
     console.log("winner", player)
     document.getElementById("winner").innerText = `Winner is ${player}`
+    window.setTimeout(restart, 5000)
+}
+
+function restart() {
+    window.location.reload()
 }
