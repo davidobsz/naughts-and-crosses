@@ -64,7 +64,9 @@ body {
 }
 
 #pick-symbol{
-    text-align: center  
+    margin:-15px 0;
+    line-height:0px
+    
 }
 
 
