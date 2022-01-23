@@ -36,7 +36,9 @@ function symbol(symbol) {
     document.getElementById("p1-symbol").innerHTML = `Player 1 has selected ${player1},\n Player 2 is ${player2}`
     currentPlayer = player1
     oppositePlayer = player2
+    document.getElementById("player-turn").className = player1
     setTimeout(clear, 2000)
+    
     
     
 }
@@ -74,7 +76,9 @@ function removes(vals){
     if ((playerTurn == player1) && (count % 2 == 0)) {
         console.log("player1 turn")
         document.getElementById(`${vals}`).innerText = playerTurn
+        document.getElementById(`${vals}`).className = playerTurn
         document.getElementById("player-turn").innerText = `Player Turn: ${player2}`
+        document.getElementById("player-turn").className = player2
         count++;
         playerTurn = player2
         checksBefore()
@@ -83,7 +87,9 @@ function removes(vals){
     else if ((playerTurn == player2) && (count % 2 == 1)){
         console.log("player 2 turn")
         document.getElementById(`${vals}`).innerText = playerTurn
+        document.getElementById(`${vals}`).className = playerTurn
         document.getElementById("player-turn").innerText = `Player Turn: ${player1}`
+        document.getElementById("player-turn").className = player1
         count++;
         playerTurn = player1
         checksBefore()
@@ -215,7 +221,7 @@ function checks(player){
         winner(player)
     }
 
-    else if(count == 8){
+    else if(count == 9){
         console.log("we have a draw")
         player = player
         winner("Draw")    
@@ -227,11 +233,13 @@ function checks(player){
 function winner(player){
     //document.getElementById("game-container").innerHTML = null
     if (player == "Draw"){
+        document.getElementById("player-turn").innerHTML = null
         document.getElementById("winner").innerText = `Draw`
         window.setTimeout(restart, 5000) 
     }
     else {
         console.log("winner", player)
+        document.getElementById("player-turn").innerHTML = null
         document.getElementById("winner").innerText = `Winner is ${player}`
         window.setTimeout(restart, 5000)
     }

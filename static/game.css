@@ -1,8 +1,13 @@
 body { 
     font-family: sans-serif;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:10%
 }
 
+#container {
+    
+}
 
 #game-container {
     text-align: center;
@@ -17,7 +22,7 @@ body {
 #game-container-ul-one li{
     list-style: none;
     display: inline-block;
-    background-color:white;
+    
     opacity: 0.4;
 
     
@@ -77,6 +82,40 @@ body {
     
 }
 
+#x { 
+    color: rgb(26, 154, 228);
+    font-size: 150%;
+}
+
+#y { 
+    color: rgb(15, 223, 15);
+    font-size: 150%;
+}
+
+
+#winner{
+    color: rgb(4, 5, 0);
+    font-size: 150%;
+}
 
 
 
+.x { 
+    color: rgb(0, 153, 255);
+}
+
+.x:hover{
+    color: rgb(0, 94, 156);
+}
+
+.y{
+    color: rgb(0, 255, 0)
+}
+.y:hover{
+    color: rgb(0, 172, 9);
+}
+
+.one:hover, .two:hover, .three:hover{
+    color: rgb(255, 0, 0)
+    
+}
