@@ -241,7 +241,7 @@ function winner(player){
         console.log("winner", player)
         document.getElementById("player-turn").innerHTML = null
         document.getElementById("winner").innerText = `Winner is ${player}`
-        window.setTimeout(restart, 5000)
+        window.setTimeout(restart, 3000)
     }
     
 }
