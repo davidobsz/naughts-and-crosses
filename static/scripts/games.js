@@ -79,6 +79,7 @@ function removes(vals){
     if ((playerTurn == player1)) {
         // console.log("player1 turn")
         document.getElementById(`${vals}`).innerText = playerTurn
+        document.getElementById(`${vals}`).onclick = null
         document.getElementById(`${vals}`).className = playerTurn
         document.getElementById("player-turn").innerText = `Player Turn: ${player2}`
         document.getElementById("player-turn").className = player2
@@ -94,6 +95,7 @@ function removes(vals){
         // console.log("player 2 turn")
         document.getElementById(`${vals}`).innerText = playerTurn
         document.getElementById(`${vals}`).className = playerTurn
+        document.getElementById(`${vals}`).onclick = null
         document.getElementById("player-turn").innerText = `Player Turn: ${player1}`
         document.getElementById("player-turn").className = player1
         count++;
@@ -149,7 +151,7 @@ function bugFix() {
     if (arr3.length > 0){
 
         if (arr3.length > 0){
-        document.getElementById('twice').innerHTML = "DO NOT CLICK TWICE MONKEY."
+        document.getElementById('twice').innerHTML = "DO NOT CLICK TWICE"
         setTimeout(useless,2000)
         }
         if(playerTurn == player1){
